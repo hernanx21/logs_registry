@@ -13,5 +13,5 @@ jobs:
         run: echo "Deploying to Production"
 
       - name: Deploying date
-        run: echo date
+        run: date
       - run: ls -l
