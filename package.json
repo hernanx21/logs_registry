@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --forceExit"
+    "test": "jest --forceExit",
+    "build": "npm run build:prod",
+    "start": "node index.js"
   },
   "author": "Ney Roman",
   "license": "ISC",
