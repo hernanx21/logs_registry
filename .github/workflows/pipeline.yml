@@ -16,6 +16,12 @@ jobs:
         with: 
           node-version: "16"
       - name: Install Dependencies
-        run: npm install --no-audit --no-fund --no-optional
+        run: npm ci
       - name: Test
         run: npm test
+      - name: deploy to heroku
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_KEY_USERS}}
+          heroku_app_name: ${{secrets.HEROKU_APP}} #Must be unique in Heroku
+          heroku_email: ${{secrets.HEROKU_KEY_EMAIL}}
