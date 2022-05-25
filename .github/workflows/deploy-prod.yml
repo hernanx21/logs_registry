@@ -11,3 +11,7 @@ jobs:
     steps: 
       - name: Deploying to Production
         run: echo "Deploying to Production"
+
+      - name: Deploying date
+        run: echo date
+      - run: ls -l
