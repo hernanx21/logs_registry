@@ -1,0 +1,13 @@
+name: Deploying to Production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  testing-first: 
+    runs-on: ubuntu-18.04
+    steps: 
+      - name: Deploying to Production
+        run: echo "Deploying to Production"
