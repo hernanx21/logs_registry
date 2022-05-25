@@ -2,8 +2,8 @@ name: Deploying Pipeline
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+      
 
 jobs:
   deploy:
@@ -25,3 +25,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_KEY_USERS}}
           heroku_app_name: ${{secrets.HEROKU_APP}} #Must be unique in Heroku
           heroku_email: ${{secrets.HEROKU_KEY_EMAIL}}
+          health_check: "https://${{secrets.HEROKU_APP}}.herokuapp.com/"
+          rollbackonhealthcheckfailed: true
