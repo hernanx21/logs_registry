@@ -18,7 +18,7 @@ const handlers = ({axios}) => ({
         //const found = users.find(r => r.id === req.body.userId)
         //console.log(found)
         if(users){
-            return res.status(201).send(users)
+            return res.status(200).send(users)
         }else{
             res.sendStatus(400)
         }
