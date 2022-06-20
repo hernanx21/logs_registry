@@ -14,4 +14,4 @@ jobs:
 
       - name: Deploying date
         run: date
-      - run: ls -l
+      - run: pwd
