@@ -14,4 +14,4 @@ jobs:
 
       - name: Deploying date
         run: date
-      - run: pwd
+      - run: cd /home/runner/work/logs_registry/logs_registry && ls -l
